@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ds3x2rd0lqn31"]
+[gd_scene load_steps=15 format=3 uid="uid://ds3x2rd0lqn31"]
 
 [ext_resource type="Texture2D" uid="uid://y4rka3601hnv" path="res://placeholder.png" id="1_4s8g6"]
 [ext_resource type="Script" path="res://player.gd" id="1_w5ob3"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://platforms.gd" id="4_fukja"]
 [ext_resource type="Script" path="res://game_camera.gd" id="4_s1wek"]
 [ext_resource type="PackedScene" uid="uid://bw5tv7oumidm" path="res://platform.tscn" id="5_3xnp1"]
+[ext_resource type="PackedScene" uid="uid://duh8havg5t6ol" path="res://gameover.tscn" id="7_etv1n"]
+[ext_resource type="PackedScene" uid="uid://c36pg4q31fqcm" path="res://timer_ui.tscn" id="7_yu44u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hb3bq"]
 atlas = ExtResource("1_4s8g6")
@@ -74,13 +76,13 @@ position = Vector2(0, 5)
 texture = ExtResource("3_34cmd")
 
 [node name="Platforms" type="Node2D" parent="."]
-position = Vector2(213, 164)
+position = Vector2(445, 167)
 scale = Vector2(-5.40797, 1.74377)
 script = ExtResource("4_fukja")
 platform_scene = ExtResource("5_3xnp1")
 
 [node name="Platform" parent="Platforms" instance=ExtResource("5_3xnp1")]
-position = Vector2(1.10948, 2.29387)
+position = Vector2(0.554729, 2.86734)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-3, -63)
@@ -88,18 +90,22 @@ script = ExtResource("4_s1wek")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
-offset_left = 571.0
-offset_top = 285.0
-offset_right = 622.0
-offset_bottom = 308.0
-text = "time:"
-
-[node name="TESTI" type="Label" parent="CanvasLayer"]
+[node name="DeathScreen" parent="CanvasLayer" instance=ExtResource("7_etv1n")]
 visible = false
-offset_left = 832.0
-offset_top = 436.0
-offset_right = 988.0
-offset_bottom = 573.0
-theme_override_font_sizes/font_size = 100
-text = "RIP"
+offset_left = 583.0
+offset_top = 296.0
+offset_right = -635.0
+offset_bottom = -323.0
+
+[node name="TimerUI" parent="CanvasLayer" instance=ExtResource("7_yu44u")]
+offset_left = 11.0
+offset_right = -1607.0
+offset_bottom = -932.0
+
+[node name="InfoLabel" type="Label" parent="."]
+offset_left = -187.0
+offset_top = 196.0
+offset_right = 131.0
+offset_bottom = 244.0
+theme_override_font_sizes/font_size = 30
+text = "Press \"SPACE\" to start"

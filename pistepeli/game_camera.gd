@@ -2,23 +2,29 @@ extends Camera2D
 
 @export var scroll_speed: float = 200
 var scrolling: bool = false
+var final_time: float = 0.0
 
 @onready var player := get_parent().get_node("Player")
-@onready var testi_rip := get_parent().get_node("CanvasLayer/TESTI")
+@onready var gameover := get_parent().get_node("CanvasLayer/DeathScreen")
+@onready var timer_ui := get_parent().get_node("CanvasLayer/TimerUI")
 
 func start_scrolling():
-	scrolling = true
+	if not scrolling:
+		scrolling = true
+		timer_ui.start()
 
 func _process(delta: float) -> void:
 	if scrolling:
 		global_position.y -= scroll_speed * delta
+	_check_player_out_of_bounds()
 
-	# Player falls off bottom
+func _check_player_out_of_bounds() -> void:
 	var bottom_y = global_position.y + get_viewport_rect().size.y / 2
 	if player.position.y > bottom_y:
 		player_died()
 
 func player_died() -> void:
-	testi_rip.visible = true
-	await get_tree().process_frame
-	get_tree().paused = true
+	scrolling = false
+	timer_ui.stop()
+	final_time = timer_ui.get_final_time()
+	gameover.show_screen(final_time)
