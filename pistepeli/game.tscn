@@ -1,0 +1,105 @@
+[gd_scene load_steps=13 format=3 uid="uid://ds3x2rd0lqn31"]
+
+[ext_resource type="Texture2D" uid="uid://y4rka3601hnv" path="res://placeholder.png" id="1_4s8g6"]
+[ext_resource type="Script" path="res://player.gd" id="1_w5ob3"]
+[ext_resource type="Texture2D" uid="uid://doua2h1olohgi" path="res://icon.svg" id="3_34cmd"]
+[ext_resource type="Script" path="res://platforms.gd" id="4_fukja"]
+[ext_resource type="Script" path="res://game_camera.gd" id="4_s1wek"]
+[ext_resource type="PackedScene" uid="uid://bw5tv7oumidm" path="res://platform.tscn" id="5_3xnp1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb3bq"]
+atlas = ExtResource("1_4s8g6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agj8d"]
+atlas = ExtResource("1_4s8g6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffimj"]
+atlas = ExtResource("1_4s8g6")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j4y3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb3bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agj8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffimj")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sepno"]
+size = Vector2(32, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4g5j"]
+size = Vector2(126.872, 111)
+
+[node name="Game" type="Node2D"]
+position = Vector2(965, 601)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-218, 230)
+scale = Vector2(1.47688, 1.18542)
+script = ExtResource("1_w5ob3")
+speed = 280.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(4, 3)
+sprite_frames = SubResource("SpriteFrames_j4y3k")
+animation = &"move"
+frame_progress = 0.987051
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(5, 3)
+shape = SubResource("RectangleShape2D_sepno")
+
+[node name="StartPlatform" type="StaticBody2D" parent="."]
+position = Vector2(0, 401)
+scale = Vector2(-9.67639, 0.894982)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartPlatform"]
+position = Vector2(0.306129, 9.5)
+shape = SubResource("RectangleShape2D_j4g5j")
+
+[node name="Sprite2D" type="Sprite2D" parent="StartPlatform"]
+position = Vector2(0, 5)
+texture = ExtResource("3_34cmd")
+
+[node name="Platforms" type="Node2D" parent="."]
+position = Vector2(213, 164)
+scale = Vector2(-5.40797, 1.74377)
+script = ExtResource("4_fukja")
+platform_scene = ExtResource("5_3xnp1")
+
+[node name="Platform" parent="Platforms" instance=ExtResource("5_3xnp1")]
+position = Vector2(1.10948, 2.29387)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-3, -63)
+script = ExtResource("4_s1wek")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+offset_left = 571.0
+offset_top = 285.0
+offset_right = 622.0
+offset_bottom = 308.0
+text = "time:"
+
+[node name="TESTI" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 832.0
+offset_top = 436.0
+offset_right = 988.0
+offset_bottom = 573.0
+theme_override_font_sizes/font_size = 100
+text = "RIP"
