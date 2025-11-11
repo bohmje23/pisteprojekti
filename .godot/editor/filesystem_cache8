@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1762350082
+::res://::1762350268
 cartoon-moon-png-favpng-asyyCz1vxjP6J8FrDhaddZ8yf.jpg::CompressedTexture2D::1445073246055944864::1762350019::1762350084::1::::<><>::
 death_screen.gd::GDScript::-1::1762350019::0::1::::<>Control<>::
 fox.png::CompressedTexture2D::2911831649590186265::1762350019::1762350084::1::::<><>::
-game.tscn::PackedScene::8481909419629216534::1762350019::0::1::::<><>::uid://y4rka3601hnv::::res://placeholder.png<>res://player.gd<>uid://doua2h1olohgi::::res://icon.svg<>res://platforms.gd<>res://game_camera.gd<>uid://bw5tv7oumidm::::res://platform.tscn<>uid://duh8havg5t6ol::::res://gameover.tscn<>uid://c36pg4q31fqcm::::res://timer_ui.tscn
-gameover.tscn::PackedScene::8579505762191375323::1762350019::0::1::::<><>::res://death_screen.gd
+game.tscn::PackedScene::8481909419629216534::1762350135::0::1::::<><>::uid://y4rka3601hnv::::res://placeholder.png<>res://player.gd<>uid://doua2h1olohgi::::res://icon.svg<>res://platforms.gd<>res://game_camera.gd<>uid://bw5tv7oumidm::::res://platform.tscn<>uid://duh8havg5t6ol::::res://gameover.tscn<>uid://c36pg4q31fqcm::::res://timer_ui.tscn
+gameover.tscn::PackedScene::8579505762191375323::1762350102::0::1::::<><>::res://death_screen.gd
 game_camera.gd::GDScript::-1::1762350019::0::1::::<>Camera2D<>::
 icon.svg::CompressedTexture2D::8183242042008104272::1762350019::1762350084::1::::<><>::
 login_menu.tscn::PackedScene::7956405437595735071::1762350019::0::1::::<><>::
@@ -14,7 +14,7 @@ placeholder.png::CompressedTexture2D::1745449293694050219::1762350019::176235008
 platform.tscn::PackedScene::117461747181932402::1762350019::0::1::::<><>::uid://doua2h1olohgi::::res://icon.svg
 platforms.gd::GDScript::-1::1762350019::0::1::::<>Node2D<>::
 platform_test.tscn::PackedScene::8158727620226718601::1762350019::0::1::::<><>::uid://doua2h1olohgi::::res://icon.svg
-player.gd::GDScript::-1::1762350019::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1762350135::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::7444169595213357176::1762350020::0::1::::<><>::uid://bhqrpa1je3qxl::::res://fox.png
 TimerUI.gd::GDScript::-1::1762350019::0::1::::<>Control<>::
 timer_ui.tscn::PackedScene::6803047718483064792::1762350020::0::1::::<><>::res://TimerUI.gd

@@ -76,13 +76,10 @@ position = Vector2(0, 5)
 texture = ExtResource("3_34cmd")
 
 [node name="Platforms" type="Node2D" parent="."]
-position = Vector2(445, 167)
+position = Vector2(13, 54)
 scale = Vector2(-5.40797, 1.74377)
 script = ExtResource("4_fukja")
 platform_scene = ExtResource("5_3xnp1")
-
-[node name="Platform" parent="Platforms" instance=ExtResource("5_3xnp1")]
-position = Vector2(0.554729, 2.86734)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-3, -63)
