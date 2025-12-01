@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://ds3x2rd0lqn31"]
+[gd_scene load_steps=16 format=3 uid="uid://ds3x2rd0lqn31"]
 
 [ext_resource type="Texture2D" uid="uid://y4rka3601hnv" path="res://placeholder.png" id="1_4s8g6"]
 [ext_resource type="Script" path="res://player.gd" id="1_w5ob3"]
-[ext_resource type="Texture2D" uid="uid://doua2h1olohgi" path="res://icon.svg" id="3_34cmd"]
+[ext_resource type="Texture2D" uid="uid://cow1clgw5bojl" path="res://platform.png" id="3_a6w5m"]
 [ext_resource type="Script" path="res://platforms.gd" id="4_fukja"]
 [ext_resource type="Script" path="res://game_camera.gd" id="4_s1wek"]
 [ext_resource type="PackedScene" uid="uid://bw5tv7oumidm" path="res://platform.tscn" id="5_3xnp1"]
 [ext_resource type="PackedScene" uid="uid://duh8havg5t6ol" path="res://gameover.tscn" id="7_etv1n"]
 [ext_resource type="PackedScene" uid="uid://c36pg4q31fqcm" path="res://timer_ui.tscn" id="7_yu44u"]
+[ext_resource type="Texture2D" uid="uid://sy2yp86c0vvt" path="res://background.png" id="9_6laup"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hb3bq"]
 atlas = ExtResource("1_4s8g6")
@@ -71,13 +72,16 @@ scale = Vector2(-9.67639, 0.894982)
 position = Vector2(0.306129, 9.5)
 shape = SubResource("RectangleShape2D_j4g5j")
 
-[node name="Sprite2D" type="Sprite2D" parent="StartPlatform"]
-position = Vector2(0, 5)
-texture = ExtResource("3_34cmd")
+[node name="Platform" type="TextureRect" parent="StartPlatform"]
+offset_left = -64.3835
+offset_top = -53.6324
+offset_right = 63.6165
+offset_bottom = 74.3676
+texture = ExtResource("3_a6w5m")
 
 [node name="Platforms" type="Node2D" parent="."]
 position = Vector2(13, 54)
-scale = Vector2(-5.40797, 1.74377)
+scale = Vector2(-6.98359, -0.16741)
 script = ExtResource("4_fukja")
 platform_scene = ExtResource("5_3xnp1")
 
@@ -106,3 +110,11 @@ offset_right = 131.0
 offset_bottom = 244.0
 theme_override_font_sizes/font_size = 30
 text = "Press \"SPACE\" to start"
+
+[node name="Background" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_left = -965.0
+offset_top = -603.0
+offset_right = 955.0
+offset_bottom = 477.0
+texture = ExtResource("9_6laup")

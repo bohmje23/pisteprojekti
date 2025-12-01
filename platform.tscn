@@ -1,18 +1,21 @@
 [gd_scene load_steps=3 format=3 uid="uid://bw5tv7oumidm"]
 
-[ext_resource type="Texture2D" uid="uid://doua2h1olohgi" path="res://icon.svg" id="1_nu05h"]
+[ext_resource type="Texture2D" uid="uid://cow1clgw5bojl" path="res://platform.png" id="1_lb3jd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gla6"]
-size = Vector2(42, 18)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddebb"]
 
 [node name="Platform" type="StaticBody2D"]
 position = Vector2(1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_0gla6")
+scale = Vector2(2.00476, 0.30523)
+shape = SubResource("CircleShape2D_ddebb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, 0)
+[node name="Sprite2D" type="TextureRect" parent="."]
+offset_left = -23.0
+offset_top = -10.0
+offset_right = 105.0
+offset_bottom = 118.0
 scale = Vector2(0.335938, 0.148438)
-texture = ExtResource("1_nu05h")
+texture = ExtResource("1_lb3jd")

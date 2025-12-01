@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< HEAD
 ::res://::1764612033
 cartoon-moon-png-favpng-asyyCz1vxjP6J8FrDhaddZ8yf.jpg::CompressedTexture2D::1445073246055944864::1762350019::1762350084::1::::<><>::
 death_screen.gd::GDScript::-1::1762350019::0::1::::<>Control<>::
@@ -18,3 +19,26 @@ player.gd::GDScript::-1::1762350483::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::7444169595213357176::1762350020::0::1::::<><>::uid://bhqrpa1je3qxl::::res://fox.png
 TimerUI.gd::GDScript::-1::1762350019::0::1::::<>Control<>::
 timer_ui.tscn::PackedScene::6803047718483064792::1762350020::0::1::::<><>::res://TimerUI.gd
+=======
+::res://::1764337376
+background.png::CompressedTexture2D::1314627309681405881::1764336800::1764336801::1::::<><>::
+cartoon-moon-png-favpng-asyyCz1vxjP6J8FrDhaddZ8yf.jpg::CompressedTexture2D::1445073246055944864::1764157701::1764157817::1::::<><>::
+death_screen.gd::GDScript::-1::1764157701::0::1::::<>Control<>::
+fox.png::CompressedTexture2D::2911831649590186265::1764157701::1764157817::1::::<><>::
+game.tscn::PackedScene::8481909419629216534::1764336925::0::1::::<><>::uid://y4rka3601hnv::::res://placeholder.png<>res://player.gd<>uid://doua2h1olohgi::::res://icon.svg<>res://platforms.gd<>res://game_camera.gd<>uid://bw5tv7oumidm::::res://platform.tscn<>uid://duh8havg5t6ol::::res://gameover.tscn<>uid://c36pg4q31fqcm::::res://timer_ui.tscn<>uid://sy2yp86c0vvt::::res://background.png
+gameover.tscn::PackedScene::8579505762191375323::1764336925::0::1::::<><>::res://death_screen.gd
+game_camera.gd::GDScript::-1::1764157701::0::1::::<>Camera2D<>::
+icon.svg::CompressedTexture2D::8183242042008104272::1764157701::1764157817::1::::<><>::
+login_menu.tscn::PackedScene::7956405437595735071::1764157701::0::1::::<><>::
+main_menu.gd::GDScript::-1::1764157701::0::1::::<>Node2D<>::
+main_menu.tscn::PackedScene::3492258494067938017::1764157701::0::1::::<><>::uid://doua2h1olohgi::::res://icon.svg<>res://main_menu.gd
+placeholder.png::CompressedTexture2D::1745449293694050219::1764157701::1764157817::1::::<><>::
+platform.png::CompressedTexture2D::5802484290373111709::1764337376::1764337376::1::::<><>::
+platform.tscn::PackedScene::117461747181932402::1764157701::0::1::::<><>::uid://doua2h1olohgi::::res://icon.svg
+platforms.gd::GDScript::-1::1764336248::0::1::::<>Node2D<>::
+platform_test.tscn::PackedScene::8158727620226718601::1764157701::0::1::::<><>::uid://doua2h1olohgi::::res://icon.svg
+player.gd::GDScript::-1::1764335833::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::7444169595213357176::1764157701::0::1::::<><>::uid://bhqrpa1je3qxl::::res://fox.png
+TimerUI.gd::GDScript::-1::1764157701::0::1::::<>Control<>::
+timer_ui.tscn::PackedScene::6803047718483064792::1764157701::0::1::::<><>::res://TimerUI.gd
+>>>>>>> 7e9d354733c1a01f6b505147e0fcac1b67319cde

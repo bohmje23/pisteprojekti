@@ -1,3 +1,5 @@
 res://game.tscn
 res://gameover.tscn
 res://platforms.gd
+res://player.gd
+res://platform.tscn
