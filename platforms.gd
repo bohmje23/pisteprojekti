@@ -1,11 +1,11 @@
 extends Node2D
 
 @export var platform_scene: PackedScene
-@export var min_x: float = 1
-@export var max_x: float = 200 
-@export var min_gap_y: float = 100
-@export var max_gap_y: float = 150
-@export var num_initial: int = 12
+@export var min_x: float = 200
+@export var max_x: float = -200 
+@export var min_gap_y: float = 25
+@export var max_gap_y: float = 100
+@export var num_initial: int = 8
 
 @onready var player := get_parent().get_node("Player")
 @onready var camera := get_parent().get_node("Camera2D")

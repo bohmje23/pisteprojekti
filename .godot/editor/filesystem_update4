@@ -1,5 +1,3 @@
 res://game.tscn
-res://player.gd
 res://gameover.tscn
-res://game_camera.gd
 res://platforms.gd
